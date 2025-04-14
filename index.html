@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="scoreboard-container">
+        <div class="scoreboard">
+            <h2><i class="fas fa-trophy"></i> LEADERBOARD</h2>
+            <div id="players-list"></div>
+            <div class="game-info">
+                <div class="info-box">
+                    <div class="label">CURRENT PLAYER</div>
+                    <div id="current-player" class="value">-</div>
+                </div>
+                <div class="info-box">
+                    <div class="label">LEVEL</div>
+                    <div id="level" class="value">1</div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="btn play-btn" disabled>
+                    <i class="fas fa-play"></i> START
+                </button>
+                <button id="strict-btn" class="btn mode-btn">
+                    <i class="fas fa-bolt"></i> STRICT: OFF
+                </button>
+                <button id="end-btn" class="btn reset-btn">
+                    <i class="fas fa-power-off"></i> RESET
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="header">
+            <h1>SIMON <span>SAYS</span></h1>
+        </div>
+        
+        <div class="player-input" id="player-input">
+            <div class="input-container">
+                <i class="fas fa-user-astronaut"></i>
+                <input type="text" id="player-name" placeholder="ENTER YOUR NAME" maxlength="15">
+                <button id="submit-name" class="btn play-btn">
+                    <i class="fas fa-check"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="game-board">
+            <div class="color-btn" id="green" data-color="0"></div>
+            <div class="color-btn" id="red" data-color="1"></div>
+            <div class="color-btn" id="yellow" data-color="2"></div>
+            <div class="color-btn" id="blue" data-color="3"></div>
+            <div class="center-circle">
+                <div class="brand">SIMON</div>
+            </div>
+        </div>
+        
+        <div class="message-box" id="message">
+            <div class="message-content">ENTER YOUR NAME TO PLAY</div>
+        </div>
+        
+        <div class="confetti-container"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
